@@ -1,15 +1,7 @@
 name: ESX Template Server (HU)
-description: Magyarított ESX szerver sablon Achim-Sommer alapján
+description: Magyar ESX szerver sablon Achim-Sommer alapján
 tasks:
   - action: download_github
     src: Achim-Sommer/FiveM-ESX-Template-Server
     ref: main
     dest: ./resources/[esx]/esx-template
-  - action: set_server_config
-    data:
-      sv_licenseKey: '{{licenseKey}}'
-      endpoint_add_tcp: '0.0.0.0:30120'
-      endpoint_add_udp: '0.0.0.0:30120'
-      sv_maxclients: 32
-      ensure:
-        - esx-template
